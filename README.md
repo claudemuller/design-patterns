@@ -1,4 +1,4 @@
-# algos
+# Software Design Patterns
 
 A repo containing various design patterns implemented in various languages.
 
