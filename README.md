@@ -15,6 +15,11 @@ A repo containing various design patterns implemented in various languages.
 
 ## [Creational Patterns](https://github.com/claudemuller/algos/tree/master/creational-patterns)
 
-### [Factory Pattern](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory)
+### [Factory Function](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory-function)
 
-- [in JavaScript](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory/javascript)
+- [in JavaScript](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory-function/javascript)
+
+### [Factory Method](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory-method)
+
+- [in TypeScript](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory-method/typescript)
+- [in Go](https://github.com/claudemuller/algos/tree/master/creational-patterns/factory-method/go)
