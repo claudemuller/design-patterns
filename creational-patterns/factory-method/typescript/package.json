@@ -1,0 +1,16 @@
+{
+    "name": "factory-method",
+    "version": "1.0.0",
+    "description": "A demo of the factory method design pattern.",
+    "main": "src/app.ts",
+    "scripts": {
+        "start": "ts-node src/app.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Claude Müller",
+    "license": "MIT",
+    "devDependencies": {
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
+}
