@@ -1,12 +1,12 @@
 // The creator abstract class declares the factory method that the concrete creators
 // should override.
-export abstract class VehicleFactory {
+export abstract class Factory {
 	public abstract create(name: string): Vehicle
 }
 
 // The concrete creator overrides the factory method to specify its own product type.
 // In this case - Car.
-export class CarFactory implements VehicleFactory {
+export class CarFactory implements Factory {
 	public create(brand: string): Vehicle {
 		return new Car(brand)
 	}
@@ -14,9 +14,23 @@ export class CarFactory implements VehicleFactory {
 
 // The concrete creator overrides the factory method to specify its own product type.
 // In this case - Boat.
-export class BoatFactory implements VehicleFactory {
+export class BoatFactory implements Factory {
 	public create(brand: string): Vehicle {
 		return new Boat(brand)
+	}
+}
+
+// A single concrete creator that returns a specific concrete product.
+export class VehicleFactory {
+	public build(type: VehicleType, brand: string): Vehicle {
+		switch (type) {
+		case VehicleType.Car:
+			return new Car(brand)
+		case VehicleType.Boat:
+			return new Boat(brand)
+		default:
+			throw new Error("Undefined vehicle type :(")
+		}
 	}
 }
 
@@ -35,7 +49,7 @@ export interface Vehicle {
 }
 
 // The concrete product class provide specific implementations for their type.
-export class Car implements Vehicle {
+class Car implements Vehicle {
 	brand: string
  	type: VehicleType = VehicleType.Car
 
@@ -49,7 +63,7 @@ export class Car implements Vehicle {
 }
 
 // The concrete product class provide specific implementations for their type.
-export class Boat implements Vehicle {
+class Boat implements Vehicle {
 	brand: string
 	type: VehicleType = VehicleType.Boat
 
