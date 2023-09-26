@@ -20,14 +20,14 @@ export class BoatFactory implements VehicleFactory {
 	}
 }
 
-enum VehicleType {
+export enum VehicleType {
 	Car,
 	Boat
 }
 
 // The product class declares all the operations that the concrete products should
 // implement.
-interface Vehicle {
+export interface Vehicle {
  	brand: string
  	type?: VehicleType
 
@@ -35,7 +35,7 @@ interface Vehicle {
 }
 
 // The concrete product class provide specific implementations for their type.
-class Car implements Vehicle {
+export class Car implements Vehicle {
 	brand: string
  	type: VehicleType = VehicleType.Car
 
@@ -49,7 +49,7 @@ class Car implements Vehicle {
 }
 
 // The concrete product class provide specific implementations for their type.
-class Boat implements Vehicle {
+export class Boat implements Vehicle {
 	brand: string
 	type: VehicleType = VehicleType.Boat
 
